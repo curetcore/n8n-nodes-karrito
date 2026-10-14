@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Use the official Karrito logo as the node icon.
+
 ## 0.1.1
 
 - Published from GitHub Actions with npm provenance.

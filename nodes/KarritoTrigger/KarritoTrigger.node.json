@@ -1,0 +1,14 @@
+{
+	"node": "n8n-nodes-karrito.karritoTrigger",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Sales"],
+	"resources": {
+		"credentialDocumentation": [
+			{ "url": "https://github.com/curetcore/n8n-nodes-karrito#credentials" }
+		],
+		"primaryDocumentation": [
+			{ "url": "https://github.com/curetcore/n8n-nodes-karrito#readme" }
+		]
+	}
+}

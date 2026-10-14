@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-karrito",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "n8n nodes for Karrito, the simplest online store with WhatsApp checkout: orders, products, customers, categories, discounts and a new-order trigger.",
 	"license": "MIT",
 	"homepage": "https://github.com/curetcore/n8n-nodes-karrito#readme",

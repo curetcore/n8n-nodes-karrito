@@ -2,7 +2,10 @@ import type { INodeProperties, INodePropertyRouting } from 'n8n-workflow';
 
 export const BASE_URL = 'https://karrito.app/api/v1';
 
-/** Every Karrito response wraps its payload in `data`. */
+/**
+ * Every Karrito response wraps its payload in `data`. This runs on every page,
+ * so 'Return All' paginates over already unwrapped items.
+ */
 export const unwrapData: INodePropertyRouting['output'] = {
 	postReceive: [{ type: 'rootProperty', properties: { property: 'data' } }],
 };
@@ -48,16 +51,15 @@ export function getManyFields(resource: string): INodeProperties[] {
 			default: false,
 			description: 'Whether to return all results or only up to a given limit',
 			routing: {
-				send: { paginate: '={{ $value }}', type: 'query', property: 'limit', value: '100' },
+				send: { paginate: '={{ $value }}' },
 				operations: {
 					pagination: {
-						type: 'generic',
+						type: 'offset',
 						properties: {
-							continue:
-								'={{ $response.body.offset + $response.body.data.length < $response.body.total }}',
-							request: {
-								qs: { offset: '={{ $response.body.offset + $response.body.data.length }}' },
-							},
+							limitParameter: 'limit',
+							offsetParameter: 'offset',
+							pageSize: 100,
+							type: 'query',
 						},
 					},
 				},

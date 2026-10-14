@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Fix: "Return All" now keeps the filters (status, search, SKU) on every page.
+
 ## 0.1.2
 
 - Use the official Karrito logo as the node icon.

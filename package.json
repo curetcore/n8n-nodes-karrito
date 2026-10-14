@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-karrito",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "n8n nodes for Karrito, the simplest online store with WhatsApp checkout: orders, products, customers, categories, discounts and a new-order trigger.",
 	"license": "MIT",
 	"homepage": "https://github.com/curetcore/n8n-nodes-karrito#readme",
@@ -34,7 +34,9 @@
 		"prepublishOnly": "n8n-node prerelease"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"!dist/tsconfig.tsbuildinfo",
+		"!dist/**/*.map"
 	],
 	"n8n": {
 		"n8nNodesApiVersion": 1,
